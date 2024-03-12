@@ -9,8 +9,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+/*
+* Tutorial (time-marked): https://youtu.be/yxMQPmmb-EQ?list=PLhs1urmduZ2_jNSEfOMTDojkvxMjgWzmd
+*
+* Podobny mój projekt w przypadku trudności: https://github.com/RobertNeat/Note_app/blob/main/app/src/main/java/com/example/note_app/MainActivity.java
+*
+* ESET potrafi blokowac dostęp do REST API, ponieważ blokuje ruch z internetu.
+* Należy wyłączyć w tym przypadku opcję (najprawdopodobniej blokuje):
+*  ochrona komputera --> System zapobiegania włamanion działający na hoście (HIPS)
+*
+* */
+
 public class MainActivity extends AppCompatActivity {
-    //System zapobiegania włamanion działający na hoście (HIPS) -- zakładka ochrona komputera --- ESET może blokować
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        //wywołanie edit_activity, żeby przetestować
         Intent intent = new Intent(MainActivity.this, NoteEditorActivity.class);
         startActivity(intent);
 
