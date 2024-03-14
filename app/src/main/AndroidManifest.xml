@@ -21,10 +21,12 @@
         <activity
             android:name=".NoteEditorActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:label="Note list"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Add or edit note">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -6,4 +6,5 @@
     <string name="edit_note_save">Save</string>
     <string name="edit_note_field_title">note title</string>
     <string name="edit_note_field_description">note description</string>
+    <string name="add_new_note">Add new note</string>
 </resources>

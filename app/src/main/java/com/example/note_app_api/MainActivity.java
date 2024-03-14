@@ -1,6 +1,8 @@
 package com.example.note_app_api;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import androidx.core.content.ContextCompat;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -16,6 +18,7 @@ import com.example.note_app_api.adapter.NoteAdapter;
 import com.example.note_app_api.model.Note;
 import com.example.note_app_api.retrofit.NoteApi;
 import com.example.note_app_api.retrofit.RetrofitService;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -25,7 +28,7 @@ import retrofit2.Response;
 
 
 /*
-* Tutorial (time-marked): https://youtu.be/yxMQPmmb-EQ?list=PLhs1urmduZ2_jNSEfOMTDojkvxMjgWzmd
+* Tutorial (time-marked): https://youtu.be/yxMQPmmb-EQ?list=PLhs1urmduZ2_jNSEfOMTDojkvxMjgWzmd&t=1265
 *
 * Podobny mój projekt w przypadku trudności: https://github.com/RobertNeat/Note_app/blob/main/app/src/main/java/com/example/note_app/MainActivity.java
 *
@@ -38,6 +41,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    FloatingActionButton add_fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,16 +49,23 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        /*
-            //wywołanie edit_activity, żeby przetestować
-            Intent intent = new Intent(MainActivity.this, NoteEditorActivity.class);
-            startActivity(intent);
-         */
 
         recyclerView = findViewById(R.id.note_list_recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        //change the color of fab plus (black->white)
+        add_fab = findViewById(R.id.note_list_fab);
+        add_fab.setColorFilter(ContextCompat.getColor(this, android.R.color.white), PorterDuff.Mode.SRC_IN);
+
+        //intent: fab -> activity_note_editor
+        add_fab.setOnClickListener(view->{
+            Intent intent = new Intent(MainActivity.this,NoteEditorActivity.class);
+            startActivity(intent);
+        });
+
+
         loadNotes();
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
