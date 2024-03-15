@@ -25,8 +25,7 @@
             android:label="Note list"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="Add or edit note">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

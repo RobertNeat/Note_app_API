@@ -14,7 +14,7 @@ public class RetrofitService {
 
     private void initializeRetrofit() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.101:9000")//set the IP of the computer that runs the REST API server
+                .baseUrl("http://192.168.104.90:9000")//set the IP of the computer that runs the REST API server
                 .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .build();
     }

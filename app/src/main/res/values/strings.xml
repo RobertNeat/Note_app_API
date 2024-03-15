@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Note_app_API</string>
+    <string name="app_name">Note API</string>
     <string name="edit_note_title">Title:</string>
     <string name="edit_note_description">Description:</string>
     <string name="edit_note_cancel">Cancel</string>

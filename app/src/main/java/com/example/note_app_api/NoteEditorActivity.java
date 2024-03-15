@@ -60,7 +60,6 @@ public class NoteEditorActivity extends AppCompatActivity {
         NoteApi noteApi = retrofitService.getRetrofit().create(NoteApi.class);
 
         save_btn.setOnClickListener(view->{
-            Toast.makeText(NoteEditorActivity.this,"TEST",Toast.LENGTH_SHORT).show();
             String title = String.valueOf(note_title_EditText.getText());
             String description = String.valueOf(note_description_EditText.getText());
 
