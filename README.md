@@ -1,5 +1,8 @@
 # Note App - Android Client
 
+![Android](https://img.shields.io/badge/Android-12-orange)
+![API](https://img.shields.io/badge/API-31-yellow)
+
 This Android application serves as a client for interacting with the Note API backend. It allows users to view a list of notes and add new notes through the app interface. The app communicates with the backend server to retrieve existing notes and save new ones.
 
 ## Configuration
