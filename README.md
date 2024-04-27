@@ -50,12 +50,6 @@ Contributions to this Android client are welcome. If you encounter any issues or
 
 This Android client for the Note API is open-source software licensed under the MIT License. See the LICENSE file for more details.
 
-## Acknowledgments
-
-Developers of the Note API backend for providing server-side functionality.
-Android developers worldwide for their contributions to the Android ecosystem.
-Feel free to explore and use this Android client to interact with the Note API backend. If you have any questions or need assistance, don't hesitate to reach out.
-
 ## Future improvements
 
 The project is not in the final stage and not most of the routes are used. The plan is to implement features in the next project phase:
